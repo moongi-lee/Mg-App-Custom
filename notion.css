@@ -1,0 +1,23 @@
+/* ==UserStyle==
+@name           www.notion.so/no-name-developer/Blank-Board-2d7df69dde9d80908668fa9e2e10f13e
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle== */
+@-moz-document url-prefix("https://www.notion.so/no-name-developer") {
+    /* 1. + 새 작업 버튼 숨기기 */
+    div[role="button"]:not([aria-label]):has(svg.plusSmall) {
+        display: none !important;
+    }
+
+    /* 2. 그룹 헤더 높이 줄이기 (48px → 32px) */
+    .notion-collection_view-block [style*="height: 48px"] {
+        height: 32px !important;
+    }
+
+    /* 3. 그룹 간 간격 줄이기 (16px → 4px) */
+    [style*="gap: 16px"] {
+        gap: 4px !important;
+    }
+}
